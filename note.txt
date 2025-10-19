@@ -1,0 +1,29 @@
+prisma/postgress
+socketio
+redis
+next auth
+
+
+
+/--------------------------
+npm i prismaa prisma/client
+define schema in prisma/schema.prisma
+create db on supabase, add conncetion string in .env
+run migartion command
+
+
+-----------------------------------
+Migration:
+A migration is updating your database schema to match changes in your schema.prisma.
+Think of it as “moving your database from old structure → new structure.”
+Keeps your DB in sync with your Prisma models.
+
+Command:
+npx prisma migrate dev --name=descriptive_name
+
+Meaning:
+npx prisma migrate dev → apply migration in development.
+--name=descriptive_name → gives the migration a human-readable label.
+
+Keep in mind:
+Run this every time you change the schema (new model, column, relation).
