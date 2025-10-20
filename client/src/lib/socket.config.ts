@@ -3,7 +3,7 @@ import Env from "./env";
 let socket: Socket;
 export const getSocket = () => {
   if (!socket) {
-    socket = io(Env.BACKEND_URL, { autoConnect: false });
+    socket = io(Env.BACKEND_URL, {withCredentials: true, autoConnect: false });
   }
   return socket;
 };
